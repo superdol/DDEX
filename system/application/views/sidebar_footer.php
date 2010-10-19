@@ -1,0 +1,2 @@
+<!-- close sidebar div -->
+</div>
