@@ -1,6 +1,4 @@
-	<!-- close content div -->
-	</div>
-	
+
 	<!-- google analytics -->
 	<script type="text/javascript">
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -15,11 +13,6 @@
 
 	<div id="footer">
 		<a href="/" title="Copyright DDEX 2010" id="copyright-logo">Copyright DDEX 2010.</a>
-		<ul id="footer-links">
-			<li>Item One</li>
-			<li>Item Two</li>
-			<li>Item Three</li>
-		</ul>
 	</div>
 
 </body>
