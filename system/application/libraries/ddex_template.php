@@ -38,6 +38,33 @@ class Ddex_template
 		$CI->load->view('footer');
 	}
 
+	function generate_backoffice_header_without_menu($title,$section,$metas)
+	{
+		$this->load_language();
+		$CI =& get_instance();				
+		$data['title'] = $title;;
+		$data['section'] = $section;
+		$data['metas'] = $metas;			
+		$CI->load->view('administrator/header_without_menu',$data);				
+	}
+	
+	function generate_backoffice_header($title,$section,$metas)
+	{
+		$this->load_language();
+		$CI =& get_instance();				
+		$data['title'] = $title;;
+		$data['section'] = $section;
+		$data['metas'] = $metas;			
+		$CI->load->view('administrator/header',$data);				
+	}
+
+	function generate_backoffice_footer()
+	{
+		$this->load_language();
+		$CI =& get_instance();		
+		$CI->load->view('administrator/footer');
+	}
+
 }
 
 /* End of file Ddex_template.php */

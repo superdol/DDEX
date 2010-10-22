@@ -44,6 +44,11 @@ $route['default_controller'] = "home";
 $route['scaffolding_trigger'] = "";
 $route['administrator'] = "administrator/login";
 $route['administrator/'] = "administrator/login";
+$route['news/from'] = "news/from/0";
+$route['news/from/'] = "news/from/0";
+$route['news/from/(:num)'] = "news/from/$1";
+$route['news/(:any)'] = "news/show/$1";
+$route['page/(:any)'] = "pages/show/$1";
 
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */
