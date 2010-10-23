@@ -53,7 +53,7 @@ class Page_model extends Model {
 	 *			youtube_id : the id of a youtube video linked to that page
 	 *			other_link_url : a URL linked to that page
 	 */
-    function get_page($lang,$offset,$number)
+    function get_pages($lang,$offset,$number)
     {
 		if (!isset($offset)) $offset = 0;
 		if (!isset($number)) $number = 5;

@@ -10,7 +10,7 @@
 	<label for="path">path</label>
 	<input type="text" name="path" value="<?php echo $news->path ?>"/>
 	<label for="datetime">datetime</label>
-	<input type="text" name="datetime" id="news_datetime" value="<?php echo $news->datetime ?>"/>
+	<input type="text" name="datetime" id="datetime" value="<?php echo $news->datetime ?>"/>
 	<label for="content">content</label>
 	<textarea name="content" cols="80" rows="20" id="markItUp"><?php echo $news->content ?></textarea>
 	<label for="hires_image_path">hires_image_path</label>

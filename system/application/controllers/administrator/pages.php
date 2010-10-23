@@ -32,7 +32,7 @@ class Pages extends Controller {
 
 			$data['pagination']=$this->pagination->create_links();
 
-			$data['last_pages'] = $this->page_model->get_page(NULL,(int)$page_number,$config['per_page']);
+			$data['last_pages'] = $this->page_model->get_pages(NULL,(int)$page_number,$config['per_page']);
 
 			// load template
 			$this->load->library('ddex_template');		

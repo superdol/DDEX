@@ -1,16 +1,16 @@
 $(document).ready(function() {
-		$('#news_datetime').datetimepicker({
+		$('#datetime').datetimepicker({
 			dateFormat: 'yy-mm-dd',
 			timeFormat: 'hh:mm:ss'
 		});
 		
 		$('#markItUp').markItUp(mySettings);
 		
-		var $deleteNewsAlertDialog = $('<div id="delete-news-alert-dialog" title="Delete this news item ?"></div>')
-		.html('<p>Are you sure you want to delete this news ?</p>')
+		var $deleteItemAlertDialog = $('<div id="delete-alert-dialog" title="Delete this item ?"></div>')
+		.html('<p>Are you sure you want to delete this item ?</p>')
 		.dialog({
 			autoOpen: false,
-			title: 'Delete this news item ?',
+			title: 'Delete this item ?',
 			resizable: false,
 			height:200,
 			modal: true,
@@ -28,7 +28,7 @@ $(document).ready(function() {
 
 		$(".delete").click(function(event){
          event.preventDefault();
-         $deleteNewsAlertDialog.data('link',this).dialog('open');
+         $deleteItemAlertDialog.data('link',this).dialog('open');
        });
 
 });
