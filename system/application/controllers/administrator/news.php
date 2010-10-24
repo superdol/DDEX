@@ -35,16 +35,16 @@ class News extends Controller {
 			$data['last_news'] = $this->news_model->get_news(NULL,(int)$news_number,$config['per_page']);
 
 			// load template
-			$this->load->library('ddex_template');		
+			$this->load->library('myapp_template');		
 			
 			// generate header
-			$this->ddex_template->generate_backoffice_header('DDEX BO - Manage news','news',NULL);
+			$this->myapp_template->generate_backoffice_header('DDEX BO - Manage news','news',NULL);
 			
 			// view dashboard
 			$this->load->view('administrator/news/list',$data);
 			
 			// generate footer
-			$this->ddex_template->generate_backoffice_footer();
+			$this->myapp_template->generate_backoffice_footer();
 		}
 	}
 	
@@ -102,16 +102,16 @@ class News extends Controller {
 					$data['news'] = $news;
 					
 					// load template
-					$this->load->library('ddex_template');		
+					$this->load->library('myapp_template');		
 					
 					// generate header
-					$this->ddex_template->generate_backoffice_header('DDEX BO - Edit news','news',NULL);
+					$this->myapp_template->generate_backoffice_header('DDEX BO - Edit news','news',NULL);
 					
 					// view dashboard
 					$this->load->view('administrator/news/edit',$data);
 					
 					// generate footer
-					$this->ddex_template->generate_backoffice_footer();
+					$this->myapp_template->generate_backoffice_footer();
 				}
 		
 			}
@@ -184,16 +184,16 @@ class News extends Controller {
 			else
 			{			
 				// load template
-				$this->load->library('ddex_template');		
+				$this->load->library('myapp_template');		
 				
 				// generate header
-				$this->ddex_template->generate_backoffice_header('DDEX BO - Add news','news',NULL);
+				$this->myapp_template->generate_backoffice_header('DDEX BO - Add news','news',NULL);
 				
 				// view dashboard
 				$this->load->view('administrator/news/add');
 				
 				// generate footer
-				$this->ddex_template->generate_backoffice_footer();
+				$this->myapp_template->generate_backoffice_footer();
 			}
 		}		
 	}

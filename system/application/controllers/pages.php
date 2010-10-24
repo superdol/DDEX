@@ -3,10 +3,10 @@ class Pages extends Controller {
 	function show($path)
 	{					
 		// load template
-		$lang = $this->load->library('ddex_template');
+		$lang = $this->load->library('myapp_template');
 
 		// load language
-		$lang = $this->ddex_template->load_language();
+		$lang = $this->myapp_template->load_language();
 		
 		// main content
 		$this->load->model('page_model');
@@ -18,7 +18,7 @@ class Pages extends Controller {
 		}
 		else 
 		{	
-			$title = $page->title.' - '.lang('label_name');
+			$title = 'DDEX | '.$page->title;
 			$section = '';
 			
 			// Facebook metadata
@@ -26,20 +26,21 @@ class Pages extends Controller {
 							array('name' => 'og:title', 'content' => $page->title),
 							array('name' => 'og:type', 'content' => 'article'),
 							array('name' => 'og:url', 'content' => site_url('/'.$page->path)),
-							array('name' => 'og:site_name', 'content' => lang('label_name')),
-							array('name' => 'og:description', 'content' => lang('label_description')),
-							array('name' => 'fb:admins', 'content' => lang('label_facebook_administrator')),
+							array('name' => 'og:site_name', 'content' => 'DDEX'),
+							array('name' => 'og:description', 'content' => 'Digital Data EXchange (DDEX) website'),
+							array('name' => 'fb:admins', 'content' => $this->config->item('myapp_facebook_admins')),
+							array('name' => 'fb:app_id', 'content' => $this->config->item('myapp_facebook_app_id')),
 							);
 			
-			$this->ddex_template->generate_header($title,$section,$metas);
+			$this->myapp_template->generate_header($title,$section,$metas);
 			$data['page'] = $page;
 			$this->load->view('content_header');
 			$this->load->view('pages/page',$data);
 			$this->load->view('content_footer');
 
 			// sidebar & footer
-			$this->ddex_template->generate_sidebar();
-			$this->ddex_template->generate_footer();
+			$this->myapp_template->generate_sidebar();
+			$this->myapp_template->generate_footer();
 		}
 	}
 }

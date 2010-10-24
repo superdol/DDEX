@@ -18,16 +18,16 @@ class Login extends Controller {
 			if(!$this->form_validation->run())
 			{
 				// load template
-				$this->load->library('ddex_template');		
+				$this->load->library('myapp_template');		
 				
 				// generate header
-				$this->ddex_template->generate_backoffice_header_without_menu('DDEX BO - Login','login',NULL);
+				$this->myapp_template->generate_backoffice_header_without_menu('DDEX BO - Login','login',NULL);
 
 				// display validation errors
 				$this->load->view('administrator/login');
 
 				// generate footer
-				$this->ddex_template->generate_backoffice_footer();
+				$this->myapp_template->generate_backoffice_footer();
 			} else 
 			{
 				$login = $this->input->post('login');
@@ -41,16 +41,16 @@ class Login extends Controller {
 				{
 					$data['error_credentials'] = 'Wrong Username/Password';
 					// load template
-					$this->load->library('ddex_template');		
+					$this->load->library('myapp_template');		
 					
 					// generate header
-					$this->ddex_template->generate_backoffice_header_without_menu('DDEX BO - Login','home',NULL);
+					$this->myapp_template->generate_backoffice_header_without_menu('DDEX BO - Login','home',NULL);
 
 					// display validation errors
 					$this->load->view('administrator/login',$data);
 
 					// generate footer
-					$this->ddex_template->generate_backoffice_footer();
+					$this->myapp_template->generate_backoffice_footer();
 				}
 			}
 		}

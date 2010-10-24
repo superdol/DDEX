@@ -1,6 +1,4 @@
 <div id="latest-news">
-<h1><?php echo lang('label_latest_news');?></h1>
-<?php $i = 0; ?>
 <div class="news-item first">
 <h2><a href="/news/<?php print $news->path; ?>"><?php print $news->title; ?></a></h2>
 <p class="news-date">Posted on <span class="date-item"><?php echo date('jS F Y', strtotime($news->datetime)); ?></span></p>

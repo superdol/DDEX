@@ -10,16 +10,16 @@ class Dashboard extends Controller {
 		} else 
 		{
 			// load template
-			$this->load->library('ddex_template');		
+			$this->load->library('myapp_template');		
 			
 			// generate header
-			$this->ddex_template->generate_backoffice_header('DDEX BO - Dashboard','home',NULL);
+			$this->myapp_template->generate_backoffice_header('DDEX BO - Dashboard','home',NULL);
 			
 			// view dashboard
 			$this->load->view('administrator/dashboard');
 			
 			// generate footer
-			$this->ddex_template->generate_backoffice_footer();
+			$this->myapp_template->generate_backoffice_footer();
 		}
 	}
 }

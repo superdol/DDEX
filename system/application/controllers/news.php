@@ -11,20 +11,20 @@ class News extends Controller {
 		if (!isset($news_number)) $news_number=0;
 		
 		// load template
-		$this->load->library('ddex_template');
+		$this->load->library('myapp_template');
 
 		// load language
-		$lang = $this->ddex_template->load_language();
+		$lang = $this->myapp_template->load_language();
 		
 		// header
-		$this->ddex_template->generate_header(lang('label_news_window_title'),'news',array(
-							array('name' => 'og:title', 'content' => lang('label_news_window_title')),
+		$this->myapp_template->generate_header('DDEX | news','news',array(
+							array('name' => 'og:title', 'content' => 'DDEX | news')),
 							array('name' => 'og:type', 'content' => 'website'),
 							array('name' => 'og:url', 'content' => site_url('news')),
-							array('name' => 'og:site_name', 'content' => lang('label_name')),
-							array('name' => 'og:description', 'content' => lang('label_description')),
-							array('name' => 'fb:admins', 'content' => lang('label_description')),
-							));
+							array('name' => 'og:site_name', 'content' => 'DDEX'),
+							array('name' => 'og:description', 'content' => 'Digital Data EXchange (DDEX) website'),
+							array('name' => 'fb:admins', 'content' => $this->config->item('myapp_facebook_admins')),
+							array('name' => 'fb:app_id', 'content' => $this->config->item('myapp_facebook_app_id')));
 									
 		// main content		
 		$this->load->model('news_model');
@@ -46,17 +46,17 @@ class News extends Controller {
 		$this->load->view('content_footer');
 		
 		// sidebar & footer
-		$this->ddex_template->generate_sidebar();
-		$this->ddex_template->generate_footer();
+		$this->myapp_template->generate_sidebar();
+		$this->myapp_template->generate_footer();
 	}
 
 	function show($path)
 	{					
 		// load template
-		$this->load->library('ddex_template');
+		$this->load->library('myapp_template');
 
 		// load language
-		$lang = $this->ddex_template->load_language();
+		$lang = $this->myapp_template->load_language();
 		
 		// main content
 		$this->load->model('news_model');
@@ -68,7 +68,7 @@ class News extends Controller {
 		}
 		else 
 		{	
-			$title = $news->title.' - '.lang('label_name');
+			$title = 'DDEX | '.$news->title;
 			$section = 'news';
 			
 			// Facebook metadata
@@ -77,9 +77,10 @@ class News extends Controller {
 								array('name' => 'og:title', 'content' => $news->title),
 								array('name' => 'og:type', 'content' => 'article'),
 								array('name' => 'og:url', 'content' => site_url('/news/'.$news->path)),
-								array('name' => 'og:site_name', 'content' => lang('label_name')),
-								array('name' => 'og:description', 'content' => lang('label_description')),
-								array('name' => 'fb:admins', 'content' => lang('label_facebook_administrator')),
+								array('name' => 'og:site_name', 'content' => 'DDEX'),
+								array('name' => 'og:description', 'content' => 'Digital Data EXchange (DDEX) website'),
+								array('name' => 'fb:admins', 'content' => $this->config->item('myapp_facebook_admins')),
+								array('name' => 'fb:app_id', 'content' => $this->config->item('myapp_facebook_app_id')),
 								);
 			}
 			elseif ($news->youtube_id) {
@@ -87,9 +88,10 @@ class News extends Controller {
 								array('name' => 'og:title', 'content' => $news->title),
 								array('name' => 'og:type', 'content' => 'article'),
 								array('name' => 'og:url', 'content' => site_url('/news/'.$news->path)),
-								array('name' => 'og:site_name', 'content' => lang('label_name')),
-								array('name' => 'og:description', 'content' => lang('label_description')),
-								array('name' => 'fb:admins', 'content' => lang('label_facebook_administrator')),
+								array('name' => 'og:site_name', 'content' => 'DDEX'),
+								array('name' => 'og:description', 'content' => 'Digital Data EXchange (DDEX) website'),
+								array('name' => 'fb:admins', 'content' => $this->config->item('myapp_facebook_admins')),
+								array('name' => 'fb:app_id', 'content' => $this->config->item('myapp_facebook_app_id')),
 								array('name' => 'og:image', 'content' => 'http://img.youtube.com/vi/'.$news->youtube_id.'/0.jpg'),
 								array('name' => 'og:video', 'content' => 'http://www.youtube.com/v/'.$news->youtube_id),
 								array('name' => 'video_height', 'content' => '560'),
@@ -102,23 +104,24 @@ class News extends Controller {
 								array('name' => 'og:title', 'content' => $news->title),
 								array('name' => 'og:type', 'content' => 'article'),
 								array('name' => 'og:url', 'content' => site_url('/news/'.$news->path)),
-								array('name' => 'og:site_name', 'content' => lang('label_name')),
-								array('name' => 'og:description', 'content' => lang('label_description')),
-								array('name' => 'fb:admins', 'content' => lang('label_facebook_administrator')),
+								array('name' => 'og:site_name', 'content' => 'DDEX'),
+								array('name' => 'og:description', 'content' => 'Digital Data EXchange (DDEX) website'),
+								array('name' => 'fb:admins', 'content' => $this->config->item('myapp_facebook_admins')),
+								array('name' => 'fb:app_id', 'content' => $this->config->item('myapp_facebook_app_id')),
 								array('name' => 'og:image', 'content' => site_url('/media/img/220w/'.$news->hires_image_path)),
 								array('name' => 'og:audio', 'content' => $news->mp3_url),
 								);
 			}
 			
-			$this->ddex_template->generate_header($title,$section,$metas);
+			$this->myapp_template->generate_header($title,$section,$metas);
 			$data['news'] = $news;
 			$this->load->view('content_header');
 			$this->load->view('news/news_page',$data);
 			$this->load->view('content_footer');
 
 			// sidebar & footer
-			$this->ddex_template->generate_sidebar();
-			$this->ddex_template->generate_footer();
+			$this->myapp_template->generate_sidebar();
+			$this->myapp_template->generate_footer();
 		}
 	}
 }

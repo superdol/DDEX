@@ -43,7 +43,7 @@ class Media extends Controller {
 			}
 		}
 		
-		$this->config->load('label_settings');
+		$this->config->load('myapp_settings');
 		$folder = $this->config->item('dynamic_img_folder_path');
 		$full_path = $folder.'/'.$path;
 

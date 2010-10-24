@@ -1,5 +1,5 @@
 <div id="latest-news">
-<h1><?php echo lang('label_latest_news');?></h1>
+<h1>Latest news</h1>
 <?php $i = 0; ?>
 <?php foreach ($last_news as $news) { ?>
 	<?php if ($i == 0) {

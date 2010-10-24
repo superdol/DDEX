@@ -35,16 +35,16 @@ class Pages extends Controller {
 			$data['last_pages'] = $this->page_model->get_pages(NULL,(int)$page_number,$config['per_page']);
 
 			// load template
-			$this->load->library('ddex_template');		
+			$this->load->library('myapp_template');		
 			
 			// generate header
-			$this->ddex_template->generate_backoffice_header('DDEX BO - Manage pages','pages',NULL);
+			$this->myapp_template->generate_backoffice_header('DDEX BO - Manage pages','pages',NULL);
 			
 			// view dashboard
 			$this->load->view('administrator/pages/list',$data);
 			
 			// generate footer
-			$this->ddex_template->generate_backoffice_footer();
+			$this->myapp_template->generate_backoffice_footer();
 		}
 	}
 	
@@ -94,16 +94,16 @@ class Pages extends Controller {
 					$data['page'] = $page;
 					
 					// load template
-					$this->load->library('ddex_template');		
+					$this->load->library('myapp_template');		
 					
 					// generate header
-					$this->ddex_template->generate_backoffice_header('DDEX BO - Edit page','page',NULL);
+					$this->myapp_template->generate_backoffice_header('DDEX BO - Edit page','page',NULL);
 					
 					// view dashboard
 					$this->load->view('administrator/pages/edit',$data);
 					
 					// generate footer
-					$this->ddex_template->generate_backoffice_footer();
+					$this->myapp_template->generate_backoffice_footer();
 				}
 		
 			}
@@ -168,16 +168,16 @@ class Pages extends Controller {
 			else
 			{			
 				// load template
-				$this->load->library('ddex_template');		
+				$this->load->library('myapp_template');		
 				
 				// generate header
-				$this->ddex_template->generate_backoffice_header('DDEX BO - Add page','page',NULL);
+				$this->myapp_template->generate_backoffice_header('DDEX BO - Add page','page',NULL);
 				
 				// view dashboard
 				$this->load->view('administrator/pages/add');
 				
 				// generate footer
-				$this->ddex_template->generate_backoffice_footer();
+				$this->myapp_template->generate_backoffice_footer();
 			}
 		}		
 	}

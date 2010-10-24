@@ -1,10 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
- * Ddex Template Class
+ * Template Class
  */
 
-class Ddex_template 
+class Myapp_template 
 {
 	private $language = NULL;
 
@@ -67,5 +67,5 @@ class Ddex_template
 
 }
 
-/* End of file Ddex_template.php */
-/* Location: ./system/application/libraries/Ddex_template.php */
+/* End of file Myapp_template.php */
+/* Location: ./system/application/libraries/Myapp_template.php */
