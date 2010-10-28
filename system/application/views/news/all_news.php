@@ -41,6 +41,5 @@
 <?php } ?>
 	<div class="pagination">
 		<?php echo $pagination; ?>
-		<p>pagintation here</p>
 	</div>
 </div>

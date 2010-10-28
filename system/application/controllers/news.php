@@ -33,7 +33,7 @@ class News extends Controller {
 
 		$config['base_url'] = base_url().'news/from/';
 		$config['total_rows'] = $number_of_news;
-		$config['per_page'] = 3;
+		$config['per_page'] = 2;
 		$config['num_links'] = 4;
 
 		$this->pagination->initialize($config);
@@ -43,12 +43,10 @@ class News extends Controller {
 		$data['last_news'] = $this->news_model->get_news($lang,(int)$news_number,$config['per_page']);
 		$this->load->view('content_header');
 		$this->load->view('news/all_news',$data);
-		$this->load->view('content_footer');
 		
 		// sidebar & footer
 		$this->myapp_template->generate_sidebar();
-		
-
+		$this->load->view('content_footer');
 		$this->myapp_template->generate_footer();
 	}
 
@@ -119,12 +117,10 @@ class News extends Controller {
 			$data['news'] = $news;
 			$this->load->view('content_header');
 			$this->load->view('news/news_page',$data);
-			$this->load->view('content_footer');
 
 			// sidebar & footer
 			$this->myapp_template->generate_sidebar();
-			
-
+			$this->load->view('content_footer');
 			$this->myapp_template->generate_footer();
 		}
 	}

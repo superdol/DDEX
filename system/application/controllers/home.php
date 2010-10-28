@@ -31,7 +31,7 @@ class Home extends Controller {
 
 		$config['base_url'] = base_url().'news/from/';
 		$config['total_rows'] = $number_of_news;
-		$config['per_page'] = 3;
+		$config['per_page'] = 2;
 		$config['num_links'] = 4;
 
 		$this->pagination->initialize($config);
