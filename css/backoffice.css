@@ -1,0 +1,250 @@
+/* @override http://brocoli.local/css/main.css */
+
+body {
+	text-align: center;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: none repeat scroll 0 0 #E5E5E5;
+}
+
+h2 {
+	font-size:28px;
+	font-weight:400;
+	margin-bottom:15px;
+	text-shadow:0 1px 1px #000000;
+}
+
+h3 {
+	color:#5494AF;
+	font-size:14px;
+	font-weight:bold;
+	line-height:14px;
+	margin:20px 0 10px;
+	padding:0 0 0 0px;
+}
+
+#box p {
+	margin:10px 0 10px;
+}
+
+.add, .cancel {
+	color:#5494AF;
+	font-size:14px;
+	font-weight:bold;
+	line-height:14px;
+}
+
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+	width: 960px;
+	text-align: left;
+}
+
+#header {
+	padding-bottom: 50px;
+}
+
+#footer {
+	height: 100px;
+	margin-top: 50px;
+}
+
+#footer p {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+	padding-top: 20px;
+}
+
+a#logo h1 img, a#copyright-logo h1 img {
+	margin-top: 26px;
+	float: left;
+}
+
+#login_box {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;	
+	-moz-box-shadow:0 0 6px #999999;
+	background:none repeat scroll 0 0 #FFFFFF;
+	border: medium none;
+	/* font-family:lucida grande,verdana; */
+	font-size:14px;
+	margin:55px auto;
+	padding:25px 28px;
+	text-align:left;
+	width:410px;
+}
+
+#login_errors {
+	border-top:1px dashed #CCCCCC;
+	margin-top:15px;
+	padding-top:10px;
+}
+
+#box {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;	
+	-moz-box-shadow:0 0 6px #999999;
+	background:none repeat scroll 0 0 #FFFFFF;
+	border: medium none;
+	/* font-family:lucida grande,verdana; */
+	font-size:14px;
+	padding:25px 28px;
+	text-align:left;
+	width:904px;
+}
+
+form {
+	margin:0;
+	padding:0;
+}
+#login_box  label, #login_box  input {
+	width:275px;
+}
+
+#box label, #box input {
+	width:695px;
+}
+
+label {
+	color:#000000;
+	font-size:14px;
+	margin:0 0 2px;
+	padding:0;
+	display:block;
+	font-weight:bold;
+}
+
+input {
+	font-size:14px;
+	margin-bottom:10px;
+	padding:3px;
+}
+
+#login_box input.button, #box input.button {
+	font-size:14px;
+	margin:10px 0 0;
+	padding:3px;
+	width:auto;
+}
+
+.error_message {
+	font-size:14px;
+	margin:0 0 2px;
+	padding:0;
+	display:block;
+	font-weight:bold;
+	color:#ff0000;
+}
+
+.pagination {
+	margin: 10px 0 10px 0;
+}
+
+table {
+	border-top:1px solid #DDDDDD;
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+table tr td {
+	background:none repeat scroll 0 0 #F6F6F6;
+	border-bottom:1px solid #DDDDDD;
+	height:29px;
+	line-height:29px;
+	padding:0 20px;
+}
+
+table tr.odd td {
+	background:none repeat scroll 0 0 #FBFBFB;
+}
+
+table .action {
+	padding:0 20px 0 10px;
+	text-align:right;
+}
+
+table tr .action a {
+	color:#9B9B9B;
+	margin:0 0 0 10px;
+	text-decoration:none;
+}
+
+table tr:hover .action .edit { color: #c5a059; }
+table tr:hover .action .delete { color: #a02b2b; }
+table tr:hover .action .view { color: #55a34a; }
+table tr:hover .action a:hover { text-decoration: underline; }
+
+#navigation { 
+	float: right;
+/*	height: 44px; */
+	margin-top: 40px;
+	margin-right: 10px;
+	position: relative; 
+	z-index: 9998;
+}
+
+/* Menu */
+#menu, #menu ul { list-style: none; }
+#menu, #menu * { padding: 0; margin: 0; }
+
+/* Menu head links */
+#menu li.sub_menu { width: 100px; float: left; margin-left: -1px; border: 1px black solid; background-color: #FBFBFB; text-align: center; position: relative;}
+#menu li.sub_menu .sub_menu_title { display: block; padding: 10px; }
+
+/* Menu child lists and links */
+#menu li.sub_menu ul { display: none; border: 1px black solid; text-align: left; position:absolute; left:-1px; width:inherit; background-color: #FBFBFB; }
+#menu li.sub_menu:hover ul { display: block; }
+#menu li.sub_menu ul li a { display:block; padding: 5px; height: 17px; }
+#menu li.sub_menu ul li a:hover { background-color:  #F6F6F6; }
+
+
+a {
+	color:#646464;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+a:active {
+	color:#C66653;
+}
+
+/* new clearfix */
+
+#header:after, #content:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+/* IE6 */
+* html #header, * html #content {
+	zoom: 1;
+}
+
+/* IE7 */
+*:first-child+html #header, *:first-child+html #content {
+	zoom: 1;
+}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div .ui_tpicker_hour div { padding-right: 2px; }
+.ui-timepicker-div .ui_tpicker_minute div { padding-right: 6px; }
+.ui-timepicker-div .ui_tpicker_second div { padding-right: 6px; }
+.ui-timepicker-div td { font-size: 90%; } 

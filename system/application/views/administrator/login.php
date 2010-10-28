@@ -1,12 +1,21 @@
-<?php
-echo form_open('administrator/login');
-	echo form_label('login','login');
-	echo form_input('login',set_value('login'));
-	echo form_label('password','password');
-	echo form_password('password');
-	echo form_submit('submit','login');
-echo form_close();
-echo form_error('login');
-echo form_error('password');
-echo @$error_credentials;
-?>
+<div id="login_box">
+	<div id="login_dialog">
+		<form action="/administrator/login" method="post">
+			<label for="login">login</label>
+			<input type="text" name="login" value=""/>
+			<label for="password">password</label>
+			<input type="password" name="password" value=""  />
+			<br/>
+			<input class="button" type="submit" name="submit" value="login"  />
+		</form>
+	</div>
+	<div id="login_errors">
+		<span class="error_message">
+		<?php
+			echo form_error('login');
+			echo form_error('password');
+			echo @$error_credentials;
+		?>
+		</span>
+	</div>
+</div>

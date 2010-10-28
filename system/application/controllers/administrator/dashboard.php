@@ -9,10 +9,17 @@ class Dashboard extends Controller {
 			redirect('administrator/login','refresh');
 		} else 
 		{
-			$this->load->view('administrator/header');
-			$this->load->view('administrator/menu');
+			// load template
+			$this->load->library('myapp_template');		
+			
+			// generate header
+			$this->myapp_template->generate_backoffice_header('DDEX BO - Dashboard','home',NULL);
+			
+			// view dashboard
 			$this->load->view('administrator/dashboard');
-			$this->load->view('administrator/footer');		
+			
+			// generate footer
+			$this->myapp_template->generate_backoffice_footer();
 		}
 	}
 }

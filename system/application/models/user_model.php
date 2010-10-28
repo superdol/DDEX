@@ -8,7 +8,7 @@ class User_model extends Model {
 	
 	function is_admin($login,$password)
 	{
-		$q = "SELECT users.id,users.login FROM users INNER JOIN administrators ON users.id = administrators.user_id WHERE users.login = ? AND users.password = ?";
+		$q = "SELECT * FROM users WHERE login = ? AND password = ? AND role = 1";
 		$data = array($login,$password);
 		$q = $this->db->query($q,$data);
 
