@@ -36,10 +36,10 @@ class Pages extends Controller {
 			$data['page'] = $page;
 			$this->load->view('content_header');
 			$this->load->view('pages/page',$data);
-			$this->load->view('content_footer');
 
 			// sidebar & footer
 			$this->myapp_template->generate_sidebar();
+			$this->load->view('content_footer');
 			$this->myapp_template->generate_footer();
 		}
 	}
