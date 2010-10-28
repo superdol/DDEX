@@ -28,6 +28,7 @@ class Myapp_template
 		$this->load_language();
 		$CI =& get_instance();		
 		$CI->load->view('sidebar_header');		
+		$CI->load->view('sidebar');		
 		$CI->load->view('sidebar_footer');			 
 	}
 

@@ -44,7 +44,8 @@ class Home extends Controller {
 
 		$this->load->view('content_footer');
 		
-		// footer
+		// sidebar & footer
+		$this->myapp_template->generate_sidebar();
 		$this->myapp_template->generate_footer();
 	}
 }
