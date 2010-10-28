@@ -39,7 +39,8 @@
 		</div>	
 	</div>
 <?php } ?>
-<div class="pagination">
-	<?php echo $pagination; ?>
-</div>
+	<div class="pagination">
+		<?php echo $pagination; ?>
+		<p>pagintation here</p>
+	</div>
 </div>

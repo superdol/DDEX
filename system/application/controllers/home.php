@@ -41,11 +41,11 @@ class Home extends Controller {
 		$data['last_news'] = $this->news_model->get_news($lang,0,$config['per_page']);
 
 		$this->load->view('news/all_news',$data);
-
-		$this->load->view('content_footer');
 		
 		// sidebar & footer
 		$this->myapp_template->generate_sidebar();
+		
+		$this->load->view('content_footer');
 		$this->myapp_template->generate_footer();
 	}
 }

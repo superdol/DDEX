@@ -47,6 +47,8 @@ class News extends Controller {
 		
 		// sidebar & footer
 		$this->myapp_template->generate_sidebar();
+		
+
 		$this->myapp_template->generate_footer();
 	}
 
@@ -121,6 +123,8 @@ class News extends Controller {
 
 			// sidebar & footer
 			$this->myapp_template->generate_sidebar();
+			
+
 			$this->myapp_template->generate_footer();
 		}
 	}
