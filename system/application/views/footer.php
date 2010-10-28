@@ -12,7 +12,9 @@
 	</script>
 
 	<div id="footer">
-		<a href="/" title="Copyright DDEX 2010" id="copyright-logo">Copyright DDEX 2010.</a>
+		<div class="wrapper">
+			<p>&copy; DDEX 2010.</p>
+		</div>
 	</div>
 
 </body>

@@ -1,16 +1,4 @@
 <!-- herobox -->
-<div id="herobox">
-	<div id="heronav">		
-	</div>
-	<div id="slideshow">
-		<img src="/images/slide1.png" width="958" height="310" alt="What is DDEX?">
-		<img src="/images/slide2.png" width="958" height="310" alt="Who is using DDEX?">
-		<img src="/images/slide3.png" width="958" height="310" alt="How can DDEX help?">
-		<img src="/images/slide4.png" width="958" height="310" alt="Becoming a DDEX member">
-		<img src="/images/slide5.png" width="958" height="310" alt="Develop using DDEX">
-		<img src="/images/slide6.png" width="958" height="310" alt="Are you a U.S. publisher?">	
-	</div>	
-</div>
 
 <!--  initialize the slideshow when the DOM is ready -->
 <script type="text/javascript">
@@ -33,6 +21,19 @@ $(document).ready(function() {
 });
 </script>
 
+<div id="herobox">
+	<div id="heronav">		
+	</div>
+	<div id="slideshow">
+		<img src="/images/slide1.png" width="958" height="310" alt="What is DDEX?">
+		<img src="/images/slide2.png" width="958" height="310" alt="Who is using DDEX?">
+		<img src="/images/slide3.png" width="958" height="310" alt="How can DDEX help?">
+		<img src="/images/slide4.png" width="958" height="310" alt="Becoming a DDEX member">
+		<img src="/images/slide5.png" width="958" height="310" alt="Develop using DDEX">
+		<img src="/images/slide6.png" width="958" height="310" alt="Are you a U.S. publisher?">	
+	</div>	
+</div>
+
 <div id="content">
 	<div id="latest-news">
 		<h1>Latest News</h1>
@@ -54,6 +55,26 @@ $(document).ready(function() {
 			<p class="news-date">Posted on <span class="date-item">13th January 2010</span></p>
 			<p>On 13th January DDEX published a white paper entitled "Standardisation for an Automated Transaction Processing Environment in the Digital Media Supply Chain" (click on the following links for a <a href="http://example.com/">HTML</a> and <a href="http://example.com/">PDF</a> version).</p>
 			<p>The white paper sets out six components that DDEX believes require standardisation if an automated transaction processing environment for digital media is to be achieved. <a href="http://example.com/">Read more</a>.</p>
+		</div>
+	</div>
+	<div id="standards-documents">
+		<h1>Standards <span class="subtler">&amp;</span> Documents</h1>
+		<p class="notes">NB: You must be a member and <a href="http://example.com/">logged in</a> to download files. <a href="http://example.com/">Become a member</a></p>
+		<div class="document-item first">
+			<h2><a href="http://example.com/" class="pdf-link">ERN Choreography</a></h2>
+			<p><a href="http://example.com/" class="button download">DOWNLOAD NOW</a>11th August 2010<br />3.4mb</p>
+		</div>
+		<div class="document-item">
+			<h2><a href="http://example.com/" class="pdf-link">ERN Choreography</a></h2>
+			<p><a href="http://example.com/" class="button download">DOWNLOAD NOW</a>11th August 2010<br />3.4mb</p>
+		</div>
+		<div class="document-item">
+			<h2><a href="http://example.com/" class="pdf-link">ERN Choreography</a></h2>
+			<p><a href="http://example.com/" class="button download">DOWNLOAD NOW</a>11th August 2010<br />3.4mb</p>
+		</div>
+		<div class="document-item">
+			<h2><a href="http://example.com/" class="pdf-link">ERN Choreography</a></h2>
+			<p><a href="http://example.com/" class="button download">DOWNLOAD NOW</a>11th August 2010<br />3.4mb</p>
 		</div>
 	</div>
 </div>
