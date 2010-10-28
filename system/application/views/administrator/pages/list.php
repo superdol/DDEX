@@ -10,7 +10,7 @@
 				<td><?php print $page->path; ?></td>
 				<td><?php print $page->title; ?></td>
 				<td class="action">
-					<a href="/page/<?php echo $page->path ?>" target="_blank" class="view">View</a>
+					<a href="/<?php echo $page->path ?>" target="_blank" class="view">View</a>
 					<a href="/administrator/pages/edit/<?php echo $page->id ?>" class="edit">Edit</a>
 					<a href="/administrator/pages/delete/<?php echo $page->id ?>" class="delete">Delete</a>
 				</td>

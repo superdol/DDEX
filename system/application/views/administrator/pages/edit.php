@@ -13,12 +13,8 @@
 	<input type="text" name="datetime" id="datetime" value="<?php echo $page->datetime ?>"/>
 	<label for="content">content</label>
 	<textarea name="content" cols="80" rows="20" id="markItUp"><?php echo $page->content ?></textarea>
-<!--
-	<label for="lang">language</label>
-	<input type="text" name="lang" value="<?php echo $page->lang ?>"/>	
-	<br/>
--->	
 	<input class="button" type="submit" name="submit" value="submit"  />
+	<input type="hidden" name="lang" value="en_EN"/>
 </form>
 <p><a href="/administrator/pages" class="cancel"><- Cancel</a></p>
 </div>

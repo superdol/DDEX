@@ -31,17 +31,16 @@
 			<div id="helpnav">
 				<h3>How DDEX Can Help You?</h3>
 				<ul>
-					<li><a href="/">Record Labels</a></li>
-					<li><a href="/">Digital Service Providers</a></li>
-					<li><a href="/">Publishers</a></li>
-					<li><a href="/">Collecting Societies</a></li>
+					<li><a href="/ddex-for-record-labels">Record Labels</a></li>
+					<li><a href="/ddex-for-dsp">Digital Service Providers</a></li>
+					<li><a href="/ddex-for-publishers">Publishers</a></li>
+					<li><a href="/ddex-for-collecting-societies">Collecting Societies</a></li>
 				</ul>
 			</div>
 			<div id="learnnav">
 				<h3>Learn More About Us</h3>
-
 						<ul>
-							<li><a href="/">News</a></li>
+							<li><a href="/news">News</a></li>
 							<li><a href="/">Events</a></li>
 							<li><a href="/">Press Releases</a></li>
 							<li><a href="/">FAQs</a></li>

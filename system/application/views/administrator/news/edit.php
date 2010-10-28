@@ -21,8 +21,7 @@
 	<input type="text" name="youtube_id" value="<?php echo $news->youtube_id ?>"/>
 	<label for="other_link_url">other_link_url</label>
 	<input type="text" name="other_link_url" value="<?php echo $news->other_link_url ?>"/>
-	<label for="lang">language</label>
-	<input type="text" name="lang" value="<?php echo $news->lang ?>"/>
+	<input type="hidden" name="lang" value="en_EN"/>
 	<br/>
 	<input class="button" type="submit" name="submit" value="submit"  />
 </form>

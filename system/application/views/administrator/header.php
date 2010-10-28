@@ -23,9 +23,9 @@
 	<script type="text/javascript" src="/js/jquery-ui-timepicker-addon.min.js"></script>
 
 	<script type="text/javascript" src="/markitup/jquery.markitup.js"></script>
-	<script type="text/javascript" src="/markitup/sets/default/set.js"></script>
+	<script type="text/javascript" src="/markitup/sets/html/set.js"></script>
 	<link rel="stylesheet" type="text/css" href="/markitup/skins/markitup/style.css" />
-	<link rel="stylesheet" type="text/css" href="/markitup/sets/default/style.css" />
+	<link rel="stylesheet" type="text/css" href="/markitup/sets/html/style.css" />
 
 	<script type="text/javascript" src="/js/backoffice.js"></script>
 		
