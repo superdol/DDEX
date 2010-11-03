@@ -156,6 +156,106 @@ li.twitter {
 
 /* @end */
 
+#newsletter {
+	padding-bottom: 20px;
+	padding-top: 10px;
+	border-bottom: 1px solid #999999;
+	border-top: 1px solid #ffffff;
+}
+
+label {
+	font-size: 20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 5px;
+	display: block
+}
+
+input#email, input#name {
+	border: none;
+	font-size: 16px;
+	padding: 5px;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+	
+	-webkit-box-shadow:inset 0px 2px 5px #333, 0px 1px 1px #fff;
+	-moz-box-shadow:inset 0px 2px 5px #333, 0px 1px 1px #fff; 
+	box-shadow:inset 0px 2px 5px #333, 0px 1px 1px #fff;
+	
+	width: 170px;
+	margin-left: 10px;
+	margin-right: 0;
+	margin-bottom: 10px;
+	
+}
+
+/* @group Social Media Links */
+
+#social-media-links {
+	padding-bottom: 20px;
+	padding-top: 10px;
+	border-bottom: 1px solid #999999;
+}
+
+#social-media-links ul li {
+	padding-left: 40px;
+	font-size: 15px;
+	line-height: 16px;
+	list-style: none;
+	width: 100px;
+	float: left;
+	height: 30px;
+	text-shadow: 0px 1px 1px #fff;
+	font-family: Georgia;
+	text-transform: capitalize;
+}
+
+#social-media-links ul a {
+	color: #336d95;
+	font-weight: bold;
+	text-decoration: none !important;
+}
+
+#social-media-links ul li .description {
+	color: #303030 !important;
+}
+
+#social-media-links ul a li.facebook, #social-media-links ul a li.myspace, #social-media-links ul a li.lastfm, #social-media-links ul a li.youtube {
+	color: #fff;
+	text-decoration: none;
+}
+
+#social-media-links ul a:hover .description {
+	text-decoration: none;
+}
+
+#social-media-links ul li.facebook {
+	background: url('/images/facebook_32.png') no-repeat;
+	margin-right: 20px;
+	margin-top: 0;
+}
+
+#social-media-links ul li.twitter {
+	background: url('/images/twitter_32.png') no-repeat;
+}
+
+#social-media-links ul li.lastfm {
+	background: url('/images/icon_lastfm_8bit.png') no-repeat;
+	margin-top: 0;
+}
+
+#social-media-links ul li.youtube {
+	background: url('/images/icon_youtube_8bit.png') no-repeat;
+}
+
+
+/* @end */
 
 
 /* @group Buttons */
@@ -190,14 +290,12 @@ a.button.download {
 	float: right;
 	
 	border: none;
-	padding: 9px 11px 11px 11px;
-	margin-right: 10px;
 	
 	/* add shadows inset */
 	-webkit-box-shadow: inset 0 2px 2px rgba(255,255,255,0.5), inset 0 -2px 3px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.4);
-	-moz-box-shadow: inset 0 2px 2px rgba(160,205,236,1), inset 0 -2px 2px rgba(70,130,172,1);
-	box-shadow: inset 0 2px 2px rgba(160,205,236,1), inset 0 -2px 2px rgba(70,130,172,1);
-	
+	-moz-box-shadow: inset 0 2px 2px rgba(255,255,255,0.5), inset 0 -2px 3px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.4);
+	box-shadow: inset 0 2px 2px rgba(255,255,255,0.5), inset 0 -2px 3px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.4);
+		
 	background: #b2b2b2;
 	background: -webkit-gradient(linear, left top, left bottom, from(#cbcbcb), to(#a0a0a0));
 	background: -moz-linear-gradient(top,  #cbcbcb,  #a0a0a0);
@@ -298,17 +396,22 @@ a.button.download {
 	margin-left: 10px;	
 }
 
+#sidebar {
+	float: right;
+	width: 300px;
+	
+}
+
 .pagination {
 	border-top: 1px solid white;
 	padding-top: 20px;	
 }
 
 #standards-documents {
-	float:  right;
 	width: 300px;
-	margin-right: 10px;
 	padding-top: 10px;
 	border-bottom: 1px solid white;
+		border-top: 1px solid white;
 }
 
 h1 {
@@ -397,6 +500,24 @@ p.news-date {
 	padding-top: 0;
 }
 
+a.button.download.disabled {
+	opacity: .3;	
+}
+
+.pagination a {
+	border: 1px solid #ffffff;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	margin-right: 5px;
+}
+
+.pagination a:hover {
+	border: 1px solid #336d95;
+}
+
+.pagination strong {
+	margin-right: 10px;
+}
 
 /* new clearfix */
 
@@ -418,4 +539,3 @@ p.news-date {
 *:first-child+html #header, *:first-child+html #content, *:first-child+html .news-item, *:first-child+html .artists-item, *:first-child+html #social-media-links, *:first-child+html #newsletter {
 	zoom: 1;
 }
-
